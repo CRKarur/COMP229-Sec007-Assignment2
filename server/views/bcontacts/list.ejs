@@ -1,0 +1,46 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!--main content/jumbotran-->
+<main class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-3">
+            <h1><%= title %></h1>
+            <a href="/bcontacts-list/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle">Add a Contact</i></a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header row-->
+                <tr>
+                    <th class="text-centre">Contact Name</th>
+                    <th class="text-centre">Contact Number</th>
+                    <th class="text-centre">Email Address</th>
+                    <th class="text-centre"></th>
+                    <th class="text-centre"></th>
+                </tr>
+                <!--repeatable row, display rows-->
+                <% for(count=0; count<BContactsList.length; count++) { %>
+                    <tr>
+                        <td class="text-centre"><%= BContactsList[count].name %></td>
+                        <td class="text-centre"><%= BContactsList[count].phone %></td>
+                        <td class="text-centre"><%= BContactsList[count].email %></td>
+                        <td class="text-centre">
+                            <a href="/bcontacts-list/edit/<%= BContactsList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i>Update</a>
+                        </th>
+                        <td class="text-centre">
+                            <a href="/bcontacts-list/delete/<%= BContactsList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i>Delete</a>
+                        </th>
+                    
+                    </tr>
+                    <% } %>
+            </table>
+
+        </div>
+    </div>
+</main>
+
+
+<%- include ../partials/bottom_nav.ejs %>    
+<%- include ../partials/footer.ejs %> 

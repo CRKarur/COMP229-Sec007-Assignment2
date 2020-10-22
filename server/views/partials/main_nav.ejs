@@ -1,0 +1,80 @@
+<!--main navigation-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/CRK_Logo.png" width="30" height="30" alt="">Chandrika Rathna Karur</a>
+    
+    <!--hamburger-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!--mr-auto changed to ml-auto tp have reference from left hand side of the page-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+  
+        <!--home link-->
+        <% if (title == "Home"){ %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+         <% } %>
+          <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i>Home </a>
+        </li>
+  
+         <!--About link-->
+         <% if (title == "About Me"){ %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+         <% } %>
+          <a class="nav-link" href="/about"><i class="fas fa-lg fa-user-circle"></i>About Me</a>
+        </li>
+  
+         <!--Projects link-->
+         <% if (title == "Projects"){ %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+         <% } %>
+          <a class="nav-link" href="/projects"><i class="fas fa-lg fa-memory"></i>Projects </a>
+        </li>
+  
+         <!--services link-->
+         <% if (title == "Services"){ %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+         <% } %>
+          <a class="nav-link" href="/services"><i class="fas fa-lg fa-cogs"></i>Services </a>
+        </li>
+  
+         <!--contact link-->
+         <% if (title == "Contact Me"){ %>
+        <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+         <% } %>
+          <a class="nav-link" href="/contact"><i class="fas fa-lg fa-at"></i>Contact Me </a>
+        </li>
+        
+        <!--bcontact link-->
+        <% if (title == "Business Contacts"){ %>
+          <li class="nav-item active">
+            <% } else { %>
+              <li class="nav-item">
+           <% } %>
+            <a class="nav-link" href="/bcontacts-list"><i class="fas fa-user-tie"></i>Business Contacts</a>
+          </li>
+
+        <!--display user name if logged in-->
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text" style="color:greenyellow"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link"><i class="fas fa-lg fa-sign-out-alt"></i>Logout</a></li>
+        <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link"><i class="fas fa-lg fa-sign-in-alt"></i>Login</a></li>
+        <% } %>
+      </div>
+  </nav> 
+  
+  

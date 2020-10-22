@@ -1,0 +1,111 @@
+<!--content for Home  Page-->
+<% if ( title == 'Home' ) { %>
+    <div class="media">
+      <img src="../../../public/assets/home.png" class="mr-3" alt="Business Solutions">
+      <div class="media-body">
+        <h5 class="mt-0">Mission: Empowering Businesses to achieve more!</h5><br><br><br>
+        
+        Creative solutions for your business needs<br><br>
+       Are you looking to automize your business process?<br><br>
+
+       Then search no further! <br><br>
+
+       <a href='/contact'>contact</a> me right away!<br><br>
+        <br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+    <% } %>
+
+
+<!--content for About me Page-->
+<% if ( title == 'About Me' ) { %>
+<div class="media">
+    <img src="../../../public/assets/CRKarur_avatar.png" class="mr-3" alt="Chandrika Rathna Karur">    
+   <div class="media-body">
+    <h5 class="mt-0">Hello!</h5><br><br>
+    I am Chandrika Rathna Karur, from Toronto, Canada, a Business Analyst.<br><br>
+    
+    Problem solving is my goal and can provide creative solutions for your business needs.<br><br>
+    
+    Contact me if you are looking for any services listed in my <a href="/about">services</a> page.<br><br>
+
+    Here is my <a href="../../../public/assets/ChandrikaRathnaKarur_Resume.pdf">resume</a> for your quick access.<br><br>
+    <br><br><br><br><br>
+  </div>
+</div>
+<% } %>
+
+
+<!--content for Projects page-->
+<% if ( title == 'Projects' ) { %>
+    <div class="media">
+      <img src="../../../public/assets/business_analyst2.png" class="mr-3" alt="Chandrika Rathna Karur">
+      <div class="media-body">
+        <h5 class="mt-0">East GTA Family Health Care online Appointment Booking System</h5>
+       Developed a business requirement document for a health care unit to seamlessly manage an online appointment booking <br>
+        <br><br>
+       <h5 class="mt-0">Customer Relationship Management for an educational institution
+    </h5>
+      Developed a Customer relationship management for an educational institution using Agile methods. <br>
+      <br><br>
+      <h5 class="mt-0">Network Security: Checking for an open ports in a network</h5> 
+      A project built using java programming skills to search a network for any open ports using PING.<br>
+      <br><br>
+      <h5 class="mt-0">PC BUild Guide App.</h5> 
+    An ongoing project to develop a PC Build Guide app which provides PC assembling guidance and services.<br>
+    <br><br>
+      </div>
+    </div>
+    <% } %>
+
+    <!--content for Services page-->
+<% if ( title == 'Services' ) { %>
+    <div class="media">
+      <img src="../../../public/assets/business_analyst2.png" class="mr-3" alt="Chandrika Rathna Karur">
+      <div class="media-body">
+        <h5 class="mt-0">Agile Business Solutions</h5>
+        <br><br>
+       <h5 class="mt-0">Web Design and Development</h5>
+      <br><br>
+      <h5 class="mt-0">Content Management</h5> 
+      <br><br>
+      <h5 class="mt-0">Logo and Graphic design</h5> 
+     <br><br>
+    <h5 class="mt-0">Support solutions</h5> 
+    <br><br>
+      </div>
+    </div>
+    <% } %>
+
+    <!--contents for contact me page-->
+    <% if ( title == 'Contact Me' ) { %>
+     <div class="jumbotron">
+        <p class="lead">Need service?<br>Lets Talk!</p>
+        <div class="container">
+          <div class="row">
+              <div class="offset-md-2 col-md-6">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1">
+              </div>
+           
+           
+            <div class="form-group">
+              <label for="exampleFormControlInput2">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+            </div>
+
+            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        </div>
+        </div>
+        </div>
+    <% } %>
