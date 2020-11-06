@@ -8,6 +8,7 @@
 
 module.exports={
 
-    "URI":"mongodb://localhost/bcontacts"
+    //"URI":"mongodb://localhost/bcontacts"
+    "URI": "mongodb+srv://Chandu:Chandu@bcontacts.tzsrc.mongodb.net/bcontacts?retryWrites=true&w=majority"
     
 }
